@@ -1,0 +1,57 @@
+/*===================FOOTER============================================*/
+
+.footer-disabled {
+	display: none;
+}
+
+.footer {
+	color: rgba(246, 246, 246, 0.74);
+	font-size: 1.15rem;
+	font-weight: 300;
+	font-family: $mainFont;
+	background-color: #1f2532;
+	padding: 28px 0;
+
+	@media (max-width: 700px) {
+		font-size: 1.6rem;
+	}
+	&__menu {
+		margin: 0 0 16px 0;
+		@media (max-width: 700px) {
+			margin: 0 0 36px 0;
+		}
+	}
+	&__copyright {
+		@media (max-width: 700px) {
+			font-size: 1.55rem;
+		}
+	}
+}
+
+.footer-menu {
+	&__list {
+		display: flex;
+		@media (max-width: 700px) {
+			flex-direction: column;
+		}
+	}
+	&__item {
+		@include transition;
+		&:hover {
+			color: $fontColor_hover_1;
+		}
+		&:not(:last-child) {
+			margin: 0 33px 0 0;
+			@media (max-width: 700px) {
+				margin: 0 0 15px 0;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+	}
+}

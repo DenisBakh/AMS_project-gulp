@@ -1,0 +1,68 @@
+/*===================HEADER-SUBMENU============================================*/
+
+.submenu-header {
+	&__body {
+		//min-width: 250px;
+		//max-width: 300px;
+		width: 100%;
+		font-family: $mainFont;
+		box-shadow: 0 17px 24px rgba(0, 0, 0, 0.14);
+		background-color: #2f2f33;
+		padding: 0 10px;
+		border-bottom: 1px solid #523422;
+		border-top: 1px solid #523422;
+		@media (max-width: 1000px) {
+			//background-color: rgba(188, 156, 255, 0.5);
+			//background: linear-gradient(180deg, rgba(188, 156, 255, 0.35) 0%, rgba(139, 164, 249, 0.35) 100%);
+			//border-radius: 5px;
+		}
+		@media (max-width: 420px) {
+		}
+	}
+	&__row {
+		@media (max-width: 1024px) {
+		}
+		@media (max-width: 500px) {
+		}
+	}
+	&__title {
+		color: $fontColor_1-0;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.5em;
+		text-transform: uppercase;
+		margin: 0 0 18px 0;
+	}
+	&__list {
+	}
+	&__item {
+		transition: 0.2s all ease;
+		color: $fontColor_1-0;
+		&:not(:last-child) {
+			border-bottom: 1px solid $borderColor_1-0;
+			@media (max-width: 1000px) {
+				border-bottom: none;
+			}
+		}
+
+		&:hover {
+			font-weight: 700;
+			text-shadow: 3px 3px 3px;
+		}
+		@media (max-width: 420px) {
+			//margin: 15px 0 0 0;
+		}
+	}
+	&__link {
+		display: block;
+		color: #fff;
+		padding: 10px 10px;
+		cursor: pointer;
+		line-height: 1.3em;
+		@media (max-width: 1000px) {
+			font-size: 1.6rem;
+			color: #fff;
+			font-weight: 700;
+		}
+	}
+}

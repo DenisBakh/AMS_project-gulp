@@ -1,0 +1,18 @@
+mixin button (type='simple', link='#', name='Скачать', isArrow=true)
+	if type==='simple'
+		if isArrow
+			a.button.button_simple.button_with-arrow(href=link)
+				span.button__text=name
+				img.button__icon(src="assets/img/tick.png", alt="arrow")
+		else
+			a.button.button_simple(href=link)
+				span.button__text=name
+				img.button__icon(src="assets/img/tick.png", alt="arrow")
+	else if type==='mobile'
+		a.button.button_mobile(href=link)
+			img.button__icon_mobile(src="../assets/img/apple.png", alt="apple")
+			span.button__text.button__text_mobile
+				span.button__text-mobile=name
+				br
+				span.button__text-mobile-store App Store
+

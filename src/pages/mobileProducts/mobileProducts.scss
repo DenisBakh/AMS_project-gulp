@@ -1,0 +1,79 @@
+@import "src/pages/_common/common.scss";
+
+.wrapper-apple {
+	height: 100vh;
+	width: 100vw;
+}
+
+.main-apple {
+	padding: 9rem 0;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	color: #ffffff;
+	&__logo {
+		text-align: center;
+		margin: 0 auto 2.5rem auto;
+
+		@media (max-width: 400px) {
+			display: none;
+		}
+		> img {
+			width: 135px;
+			height: 135px;
+			@media (max-width: 600px) {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+	&__title {
+		font-family: $mainFont;
+		font-weight: 500;
+		font-size: 3.55rem;
+		line-height: 1em;
+		text-shadow: 3px 4px 15px rgba(0, 0, 0, 0.29);
+		text-align: center;
+		margin: 0 auto 1.7rem auto;
+
+		@media (max-width: 600px) {
+			font-size: 3.5rem;
+			line-height: 1.3em;
+		}
+		&-product {
+			@media (max-width: 600px) {
+				display: block;
+				font-size: 4.4rem;
+				margin-top: 0.2em;
+			}
+		}
+	}
+	&__text {
+		display: block;
+		max-width: 660px;
+		font-weight: 600;
+		font-size: 1.22rem;
+		line-height: 1.2em;
+		text-align: center;
+		margin: 0 auto 3rem auto;
+		@media (max-width: 600px) {
+			font-weight: 600;
+			font-size: 1.5rem;
+			letter-spacing: 0.03em;
+			line-height: 1.7em;
+			margin: 0 auto 3rem auto;
+		}
+	}
+	&__link {
+		max-width: 145px;
+		height: 43px;
+
+		margin: 0 auto;
+	}
+	@media (max-width: 400px) {
+		padding: 3.4rem 0;
+	}
+}

@@ -1,0 +1,98 @@
+//===============button============
+@keyframes link-icon {
+	0% {
+		transform: translateY(0%);
+	}
+	25% {
+		transform: translateY(20%);
+	}
+	50% {
+		transform: translateY(0%);
+	}
+	75% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+.button {
+	height: 100%;
+	padding: 0 34px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: inherit;
+	color: inherit;
+	text-transform: inherit;
+	font-size: 17px;
+	letter-spacing: inherit;
+	border: 1px solid rgba(255, 255, 255, 0.71);
+	border-radius: 4px;
+	position: relative;
+	cursor: pointer;
+	//@include transition;
+	transition: 0.25s ease all;
+	&_mobile {
+		//border: 1px solid #9ca1ad;
+		background-color: #000101;
+		padding: 0px 15px 3px 15px;
+		border: 1px solid rgba(156, 161, 173, 1);
+	}
+	&__text {
+		display: block;
+		&_mobile {
+			align-self: flex-start;
+		}
+		&-mobile {
+			opacity: 0.83;
+			color: #feffff;
+			font-family: $secondFont;
+			font-size: 10px;
+			letter-spacing: 0.6px;
+		}
+		&-mobile-store {
+			font-family: $secondFont;
+			font-size: 17px;
+		}
+	}
+	&_with-arrow {
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -138px;
+			right: -59px;
+			height: 77px;
+			width: 127px;
+			background: url("../img/arrow.png");
+			background-repeat: no-repeat;
+			@media (max-width: 500px) {
+				display: none;
+			}
+		}
+	}
+	&_simple:hover {
+		box-shadow: 0px 0px 15px -4px rgba(255, 255, 255, 1);
+		.button__icon {
+			animation-name: link-icon;
+			animation-duration: 1500ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		@media (max-width: 500px) {
+			font-size: 15px;
+			padding: 0 30px;
+		}
+	}
+	&_mobile:hover {
+		background-color: #202830;
+	}
+	&__icon {
+		width: 16px;
+		&_mobile {
+			width: 23px;
+		}
+	}
+}

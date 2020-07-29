@@ -1,0 +1,57 @@
+@import "src/pages/_common/common.scss";
+@import "src/components/blocks/dropdawn-icon/dropdawn-icon.scss";
+
+.list {
+	list-style-type: none;
+	counter-reset: num;
+	&__item {
+		&::before {
+			content: counter(num) ") ";
+			counter-increment: num;
+		}
+		&:not(:last-child) {
+			margin: 0 0 10px 0;
+		}
+	}
+}
+
+.license {
+	color: $fontColor_1-1;
+	font-size: 1.45rem;
+	font-weight: 600;
+	line-height: 1.5em;
+	letter-spacing: 0.0039em;
+	&__item:not(:last-child) {
+		margin: 0 0 45px 0;
+	}
+}
+
+.title {
+	font-size: 2.55rem;
+	font-weight: 500;
+	line-height: 1em;
+	letter-spacing: 0.03em;
+	&_license-argeement {
+		font-size: 2.55rem;
+		text-transform: uppercase;
+	}
+	&_offert-accept {
+		font-size: 2.12rem;
+	}
+	&_rights-cost {
+		font-size: 1.8rem;
+		letter-spacing: 0.02em;
+	}
+}
+
+.licence-block {
+	&__title {
+		margin: 0 0 1.57rem 0;
+	}
+
+	&__text {
+		&:not(:last-child) {
+			margin: 0 0 0.8rem 0;
+		}
+	}
+}

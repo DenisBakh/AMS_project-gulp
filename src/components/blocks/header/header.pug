@@ -1,0 +1,57 @@
+
+//include /components/blocks/header/submenu/submenu.pug
+include submenu/submenu.pug
+
+mixin header(logged='unlogged',menu,fixed='true')
+	if fixed==='true'
+		.header.header_fixed
+			.container
+				.header__burger
+					.burger-menu
+						.burger-menu__line
+						.burger-menu__line
+						.burger-menu__line
+				.header__row
+					.header__logo
+						a.logotype(href='index.html')
+							img(src='assets/img/logo.png', alt='logo')
+					.header__navigation
+						.header-menu
+							.header-menu__nav
+								nav.header-nav
+									ul.header-nav__list
+										for item in menu
+											li.header-nav__item
+												if !(item.submenu==='')
+													a.header-nav__link.header-nav__link_menu(href=item.link title=item.text)=item.text
+														.dropdawn-icon.dropdawn-icon_header-menu
+													.header-nav__submenu
+														+submenu(item.submenu)
+												else
+													a.header-nav__link(href=item.link title=item.text)=item.text
+	else
+		.header
+			.container
+				.header__burger
+					.burger-menu
+						.burger-menu__line
+						.burger-menu__line
+						.burger-menu__line
+				.header__row
+					.header__logo
+						a.logotype(href='index.html')
+							img(src='assets/img/logo.png', alt='logo')
+					.header__navigation
+						.header-menu
+							.header-menu__nav
+								nav.header-nav
+									ul.header-nav__list
+										for item in menu
+											li.header-nav__item
+												if !(item.submenu==='')
+													a.header-nav__link.header-nav__link_menu(href=item.link title=item.text)=item.text
+														.dropdawn-icon.dropdawn-icon_header-menu
+													.header-nav__submenu
+														+submenu(item.submenu)
+												else
+													a.header-nav__link(href=item.link title=item.text)=item.text

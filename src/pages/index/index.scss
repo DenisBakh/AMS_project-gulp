@@ -1,0 +1,255 @@
+@import "src/pages/_common/common.scss";
+@import "src/components/blocks/dropdawn-icon/dropdawn-icon.scss";
+
+.container_product-block {
+	@media (max-width: 700px) {
+		padding: 0;
+	}
+	@media (max-width: 430px) {
+		padding: 0;
+	}
+}
+
+.slider-item {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 517px;
+	padding: 106px 0;
+
+	color: #ffffff;
+	font-family: $mainFont;
+	font-size: 3.3rem;
+	font-weight: 600;
+
+	line-height: 1.2em;
+	letter-spacing: 1.15px;
+	&__body {
+		@media (max-width: 700px) {
+			text-align: center;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		margin: 0 0 15px 0;
+		letter-spacing: 0.015em;
+		@media (max-width: 700px) {
+			margin: 0 0 13px 0;
+			letter-spacing: 0.03em;
+		}
+	}
+	&__descr {
+		font-size: 1.5rem;
+		font-weight: 300;
+		letter-spacing: 0.001em;
+		margin: 0 0 42px 0;
+		line-height: 1.2em;
+		@media (max-width: 700px) {
+			letter-spacing: 0.045em;
+			margin: 0 0 30px 0;
+		}
+	}
+	&__link {
+		display: inline-block;
+		height: 56px;
+		width: 187px;
+		font-size: 1.15rem;
+		letter-spacing: 0.7px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 0 0 61px 0;
+		@media (max-width: 500px) {
+			width: 170px;
+			height: 52px;
+		}
+	}
+	@media (max-width: 500px) {
+		height: 397px;
+		padding: 43px 0;
+	}
+}
+
+.product-block {
+	&__row {
+		display: flex;
+		@media (max-width: 700px) {
+			flex-direction: column;
+		}
+	}
+	&__item {
+		position: relative;
+		overflow: hidden;
+		flex: 1 1 50%;
+		height: 441px;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		&:first-child {
+			border-radius: 4px 0 0 4px;
+			@media (max-width: 700px) {
+				border-radius: 0;
+			}
+		}
+		&:last-child {
+			border-radius: 0 4px 4px 0;
+			@media (max-width: 700px) {
+				border-radius: 0;
+			}
+		}
+		> img {
+			transition: all 0.25s ease;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: 700px) {
+			flex: 1 0 auto;
+			height: 294px;
+		}
+		&:hover > img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.product-item {
+	color: #ffffff;
+	font-family: $mainFont;
+	position: absolute;
+	top: 52%;
+	left: 9%;
+	width: 70%;
+	&__img {
+		margin: 0 0 20px 0;
+		width: 67px;
+		height: 67px;
+		@media (max-width: 700px) {
+			width: 47px;
+			height: 47px;
+			margin: 0 0 11px 0;
+		}
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		margin: 0 0 10px;
+		@media (max-width: 700px) {
+			font-size: 2.35rem;
+			margin: 0 0 5px;
+			letter-spacing: 0.02em;
+		}
+	}
+	&__text {
+		font-size: 1.3rem;
+		line-height: 1.5em;
+		letter-spacing: 0.02em;
+		font-weight: 300;
+		@media (max-width: 700px) {
+			font-size: 1.6rem;
+			line-height: 1.35em;
+			letter-spacing: 0.015em;
+		}
+	}
+	@media (max-width: 700px) {
+		top: 42%;
+		left: 9%;
+		width: 80%;
+	}
+	@media (max-width: 700px) {
+		top: 52%;
+		left: 9%;
+		width: 80%;
+	}
+}
+
+//=================SLIDER====================================================*/
+
+/* Слайдер */
+.slider {
+	position: relative;
+	min-width: 0;
+	z-index: 5;
+}
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+	display: flex;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+}
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+.slider {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+	position: absolute;
+	display: flex;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 5.5%;
+}
+.slick-dots li:not(:last-child) {
+	margin: 0 15px 0 0;
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+	font-size: 0;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-color: #ffffff;
+	opacity: 0.52;
+	box-shadow: 0 0 11px 2px rgba(0, 0, 0, 0.31);
+	border-radius: 50%;
+	@media (max-width: 500px) {
+		width: 10px;
+		height: 10px;
+	}
+}
+.slick-dots li.slick-active button {
+	opacity: 1;
+}

@@ -1,0 +1,11 @@
+mixin footer(footerMenu, footerCopyRight)
+	footer.footer
+		.container.container_footer
+			.footer__menu
+				.footer-menu
+					ul.footer-menu__list
+						for item in footerMenu
+							li.footer-menu__item
+									a.footer-menu__link(href=item.link title=item.text)=item.text
+			.footer__copyright
+				p.footer-copyright=footerCopyRight

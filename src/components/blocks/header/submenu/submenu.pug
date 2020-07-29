@@ -1,0 +1,10 @@
+mixin submenu(list)
+	.submenu-header
+		.submenu-header__body
+			.submenu-header__row
+				.submenu-header__column
+					ul.submenu-header__list
+						each item in list
+							li.submenu-header__item
+								a.submenu-header__link(href=item.subLink)=item.subText
+

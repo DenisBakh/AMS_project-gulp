@@ -1,0 +1,88 @@
+include ../../components/blocks/header/header.pug
+include ../../components/blocks/footer/footer.pug
+include ../../components/blocks/buttons/button.pug
+
+
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+		link(rel="icon" href="assets/img/favicon.ico")
+		link(rel="stylesheet", href="assets/css/common.css")
+		link(rel="stylesheet", href="assets/css/index.css")
+		title='Главная'
+	body
+		.wrapper
+			-
+				const headerMenu = [
+					{text: 'Наши предложения', link:'#',submenu:''}, 
+					{text: 'Поддержка', link:'#',submenu:''}, 
+					//{text: 'Соглашения', link:'#',submenu:[{subText: 'Правила', subLink: '#'},{subText: 'Правила', subLink: 'https://www.google.com/'}, {subText: 'Правила', subLink: '#'}]}
+				]
+			+header('unlogged', headerMenu, false)
+
+
+			main.main
+				section.main__slider
+					.slider
+						.slider__item
+							.slider-item.ibgChange
+								.ibgChange__item(data-bg='450')
+									img(src="assets/img/bg320.jpg", alt="")
+								.ibgChange__item(data-bg='30000')
+									img(src="assets/img/BG.jpg", alt="")
+								.container
+									.slider-item__body
+										h2.slider-item__title Программа Фотодива
+										p.slider-item__descr Попробуйте инновационный фоторедактор
+										.slider-item__link
+											+button('simple','#', 'Скачать', true)
+						.slider__item
+							.slider-item.ibgChange
+								.ibgChange__item(data-bg='320')
+									img(src="assets/img/bg2-320.jpg", alt="")
+								.ibgChange__item(data-bg='30000')
+									img(src="assets/img/BG2.jpg", alt="")
+								.container
+									.slider-item__body
+										h2.slider-item__title Программа Фотодива
+										p.slider-item__descr Попробуйте инновационный фоторедактор
+										.slider-item__link
+											+button('simple','', 'Скачать', true)
+
+				
+				section.main__content
+					.container.container_product-block
+						.product-block
+							.product-block__row
+								a.product-block__item(href="#")
+									img(src="assets/img/photodiva.png", alt="photodiva")
+									.product-item
+										img.product-item__img(src="assets/img/photodiva-icon.png", alt="photodiva")
+										h3.product-item__title фотодива
+										p.product-item__text Попробуйте инновационный фоторедактор для мобильного приложения
+								a.product-block__item(href="#")
+									img(src="assets/img/photodoc.png", alt="photoDoc")
+									.product-item
+										img.product-item__img(src="assets/img/photodoc-icon.png", alt="photoDoc")
+										h3.product-item__title ФОТО на документы
+										p.product-item__text Попробуйте инновационный фоторедактор для мобильного приложения
+
+
+
+			-
+				const footerMenu = [
+					{text: 'Лицензионное соглашение', link:'privacy-policy.html'}, 
+					{text: 'Политика конфиденциальности', link:'#'}, 
+					{text: 'О компании', link:'#'}, 
+				]
+			-const footerCopyRight='© 2020 PhotoDiva − портретный фоторедактор'
+			+footer(footerMenu,footerCopyRight)
+
+		script(src='assets/js/jquery.min.js')
+		script(src='assets/js/slick.min.js')
+		script(src='assets/js/common.js')
+		script(src='assets/js/index.js')
+
