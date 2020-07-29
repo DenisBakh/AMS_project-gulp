@@ -1,4 +1,6 @@
 
+@@include('../../components/blocks/header/header.js')
+
 //=====================SLIDER===========================================================//
 
 $(window).on('load', function () {

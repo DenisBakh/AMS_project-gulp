@@ -21,6 +21,7 @@ const tt2woff2 = require('gulp-ttf2woff2')
 const fonter = require('gulp-fonter')
 const groupCssMediaQueries = require('gulp-group-css-media-queries')
 const cleanCss = require('gulp-clean-css')
+const fileinclude = require('gulp-file-include')
 
 
 
@@ -39,10 +40,10 @@ function browsersync() {
 
 function js() {
 	src(['node_modules/jquery/dist/jquery.min.js', 'src/components/_common/libs/*.js'])
-		//.pipe(fileinclude())
 		.pipe(rename({ dirname: '' }))
 		.pipe(dest('dist/assets/js/'))  // обработка библиотек
 	return src(['src/pages/**/*.js']) // обработка своих Js файлов
+		.pipe(fileinclude())
 		.pipe(rename({ dirname: '' }))
 		.pipe(dest('dist/assets/js/'))
 		//.pipe(src(['src/pages/**/*.js']))
